@@ -1,0 +1,103 @@
+$tile_colour : linear-gradient(to right, rgb(0,0,255,1),rgb(0,0,255,0.8));
+
+body{
+    //background-color: rgb(222, 145, 50);
+    background-image: url('../Images/img.jpeg');
+    //background-repeat: no-repeat;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4%;
+    padding:5% 1%;
+}
+#container-div{
+    flex-direction: column;
+}
+
+#input-box-div{
+    display: flex;
+    width:100%;
+    @media (max-width:600px){
+        flex-direction: column;
+    }
+}
+
+div#display-tile-container{
+    flex-direction: column;
+    width:90%;
+    div{
+        padding: 1% 10%;
+        margin: 2% 5%;
+        border-radius: 1600px;
+        background-image: $tile_colour;
+        width: max-content;
+        &:hover{
+            transition: top 1.5s;
+            box-shadow: 0px 5px 5px 0px;
+            position: relative;
+            bottom: 1px;
+            background-image:green ;
+        }
+        h4{
+            color: whitesmoke;
+        }
+        @media (max-width:600px){
+            img{
+                display: none;
+            }
+            gap:0.5px;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+input{
+    padding: 5px 10px;
+    border-radius: 16px;
+    //margin: 4px 2px;
+    font-size: large;
+    @media (max-width:800px){
+        font-size: medium;
+        
+    }
+}
+
+h4{
+    display: block;
+    width:fit-content;
+    padding: 10px;
+    white-space: nowrap;
+    @media (max-width: 1000px){
+        transition: 2s;
+        font-size: smaller;
+        padding:2px;
+    }
+    @media (min-width:1000px){
+        transition: 2s;
+        font-size: larger;
+        padding:10px;
+    }
+    
+}
+
+button{
+    width: fit-content;
+    font-size: larger;
+    white-space: nowrap;
+    background-color: green;
+    padding:5% 10%;
+    border-radius: 1600px;
+    @media (max-width: 900px){
+        font-size: medium;
+    }
+}
+
+@media (max-width:600px){
+    h4{
+        white-space: wrap;
+    }
+}
+
